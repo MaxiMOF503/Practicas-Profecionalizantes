@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechSolutions - Contacto</title>
+
+<!-- Favicon PNG -->
+<link rel="icon" href="img/logo.png" type="image/png">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="img/logo.png" alt="TechSolutions Logo">
+      <span class="nombre-empresa">TechSolutions</span>
+    </a>
+
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="contacto.html" class="active">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+
+
+<main>
+  <section class="contacto">
+    <div class="container-contacto">
+      <h2>Contacto</h2>
+      <p class="intro-contacto">¿Tenés dudas o querés trabajar con nosotros? Escribinos.</p>
+
+      <div class="contacto-grid">
+        <!-- FORMULARIO -->
+        <form id="form-contacto">
+          <input type="text" name="nombre" placeholder="Tu nombre" required>
+          <input type="email" name="email" placeholder="Tu email" required>
+          <textarea name="mensaje" rows="6" placeholder="Tu mensaje" required></textarea>
+          <button type="submit" class="btn">Enviar</button>
+          <p class="form-feedback" id="feedback">Mensaje enviado correctamente. ¡Gracias!</p>
+        </form>
+
+        <!-- INFO Y REDES -->
+        <div class="info-contacto">
+          <div class="contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+54 9 11 1234-5678</span>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>contacto@webmasterpro.com</span>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>CABA, Argentina</span>
+          </div>
+          <div class="redes">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 TechSolutions. Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSolutions - Nosotros</title>
+
+    <!-- Favicon PNG -->
+    <link rel="icon" href="img/logo.png" type="image/png">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="js/main.js" defer></script>
+    <style>
+        /* Sección CEO */
+        .ceo-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+            margin: 50px 20px;
+            background: #f5f5f5;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .ceo-section img {
+            width: 250px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .ceo-section .ceo-text {
+            flex: 1;
+            min-width: 250px;
+        }
+        .ceo-section h2 {
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+        .ceo-section p {
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        /* Valores */
+        .valores {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 50px 20px;
+        }
+        .valor {
+            text-align: center;
+            max-width: 250px;
+            padding: 15px;
+            background: #f5f5f5;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .valor i {
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+        .valor h4 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .valor p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        /* Oficinas */
+        .oficinas-section {
+            margin: 50px 20px;
+            text-align: center;
+        }
+        .oficinas-section h2 {
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+        .oficinas-section p.intro {
+            margin-bottom: 30px;
+            color: #555;
+        }
+        .oficinas-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        .oficinas-cards .card {
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #f5f5f5;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 15px;
+            text-align: center;
+            min-height: 450px; /* altura uniforme */
+        }
+        .oficinas-cards .card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            object-fit: cover;
+            height: 200px; /* altura uniforme de imagen */
+        }
+        .oficinas-cards .card h3 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+        .oficinas-cards .card p {
+            font-size: 0.95rem;
+            color: #555;
+            flex-grow: 1; /* para que el texto rellene el espacio restante */
+        }
+
+    </style>
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="img/logo.png" alt="TechSolutions Logo">
+      <span class="nombre-empresa">TechSolutions</span>
+    </a>
+
+    <ul>
+      <li><a href="index.html" class="active">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+    <!-- Historia CEO -->
+    <section class="ceo-section">
+        <img src="img/ceo.jpg" alt="CEO de TechSolutions">
+        <div class="ceo-text">
+            <h2>Conoce a nuestro CEO</h2>
+            <p>Juan Pérez, fundador y CEO de TechSolutions, siempre fue un apasionado de la tecnología. Desde joven soñaba con crear soluciones que hicieran la vida más fácil a empresas y particulares.</p>
+            <p>La idea de TechSolutions surgió mientras trabajaba en el sector tecnológico y veía la falta de asesoramiento profesional en productos tecnológicos de calidad. Decidió emprender su propio camino, combinando venta de productos innovadores con un sólido soporte y capacitación para los clientes.</p>
+            <p>Hoy, bajo su liderazgo, TechSolutions se destaca por ofrecer tecnología confiable y un servicio integral que asegura que cada cliente aproveche al máximo sus productos.</p>
+        </div>
+    </section>
+
+    <!-- Valores -->
+    <section class="nosotros-section">
+        <div class="valores">
+            <div class="valor">
+                <i class="fa-solid fa-lightbulb"></i>
+                <h4>Innovación</h4>
+                <p>Siempre buscamos la última tecnología para que nuestros clientes estén a la vanguardia.</p>
+            </div>
+            <div class="valor">
+                <i class="fa-solid fa-handshake-angle"></i>
+                <h4>Compromiso</h4>
+                <p>Garantizamos satisfacción y soporte profesional en cada venta y servicio.</p>
+            </div>
+            <div class="valor">
+                <i class="fa-solid fa-users"></i>
+                <h4>Confianza</h4>
+                <p>Proveemos soluciones seguras y confiables, adaptadas a cada necesidad.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Oficinas -->
+    <section class="oficinas-section">
+        <h2>Nuestras oficinas y forma de trabajo</h2>
+        <p class="intro">En TechSolutions, nuestras oficinas están diseñadas para fomentar un ambiente profesional y colaborativo. Cada espacio está equipado con tecnología de punta para brindar capacitaciones efectivas y atención personalizada a nuestros clientes. Nuestro equipo trabaja en estrecha coordinación para garantizar que cada producto y servicio cumpla con los más altos estándares de calidad y eficiencia.</p>
+        <div class="oficinas-cards">
+            <div class="card">
+                <img src="img/oficina1.jpg" alt="Capacitación en TechSolutions">
+                <h3>Capacitación continua</h3>
+                <p>Todo nuestro equipo recibe capacitación constante para asegurar que cada cliente reciba asesoramiento experto sobre nuestros productos y soluciones tecnológicas.</p>
+            </div>
+            <div class="card">
+                <img src="img/oficina2.jpg" alt="Área de ventas en TechSolutions">
+                <h3>Atención y venta de productos</h3>
+                <p>Nuestras oficinas cuentan con un área dedicada a la venta y demostración de productos, garantizando que cada cliente conozca y pruebe lo que adquiere, con asesoramiento profesional incluido.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 TechSolutions. Todos los derechos reservados.</p>
+    <p>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    </p>
+</footer>
+</body>
+</html>

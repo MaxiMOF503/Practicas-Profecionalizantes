@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSolutions - Productos</title>
+
+    <!-- Favicon PNG -->
+    <link rel="icon" href="img/logo.png" type="image/png">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <style>
+        /* Toast notificación */
+        #toast {
+            visibility: hidden;
+            min-width: 250px;
+            margin-left: -125px;
+            background: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 12px;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            bottom: 30px;
+            font-size: 16px;
+            opacity: 0;
+            transition: opacity 0.5s, bottom 0.5s;
+        }
+        #toast.show {
+            visibility: visible;
+            opacity: 1;
+            bottom: 50px;
+        }
+
+        /* Estilos rápidos para buscador y botones */
+        .buscador input {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px 15px;
+            border-radius: 25px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            outline: none;
+            margin-bottom: 20px;
+        }
+        .filtros .btn-filtro {
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        .filtros .btn-filtro:hover,
+        .filtros .btn-filtro.active {
+            background-color: #0056b3;
+        }
+        .card button.btn-agregar {
+            padding: 8px 15px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            background-color: #28a745;
+            color: white;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        .card button.btn-agregar:hover {
+            background-color: #1e7e34;
+        }
+    </style>
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="img/logo.png" alt="TechSolutions Logo">
+      <span class="nombre-empresa">TechSolutions</span>
+    </a>
+
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="productos.html" class="active">Productos</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- Aquí irían tus secciones de productos, buscador, filtros y cards -->
+</main>
+</body>
+</html>
+
+
+    <main>
+
+
+<!-- INTRO DE PRODUCTOS -->
+<section class="productos-intro">
+  <h2>Productos</h2>
+  <p>
+    Todos nuestros productos están respaldados por el asesoramiento y soporte profesional de TechSolutions,
+    garantizando que funcionen de manera óptima y que cada cliente pueda aprovechar al máximo su inversión tecnológica.
+  </p>
+</section>
+
+
+            <!-- Buscador -->
+<div class="buscador">
+    <input type="text" id="buscador" placeholder="Buscar producto..." onkeyup="buscarProducto()">
+</div>
+
+<!-- Filtros -->
+<div class="filtros">
+    <button class="btn-filtro active" onclick="filtrar('todos', this)">Todos</button>
+    <button class="btn-filtro" onclick="filtrar('smartphone', this)">Smartphones</button>
+    <button class="btn-filtro" onclick="filtrar('auriculares', this)">Auriculares</button>
+    <button class="btn-filtro" onclick="filtrar('smartwatch', this)">Smartwatches</button>
+    <button class="btn-filtro" onclick="filtrar('tablet', this)">Tablets</button>
+    <button class="btn-filtro" onclick="filtrar('laptop', this)">Laptops</button>
+</div>
+
+<!-- Productos -->
+<div class="cards" id="productos-cards">
+    <!-- Smartphone -->
+    <div class="card producto" data-categoria="smartphone" data-nombre="Smartphone X100" data-precio="300">
+        <img src="img/smartphone1.jpg" alt="Smartphone X100">
+        <div class="card-info">
+            <h3>Smartphone X100</h3>
+            <p>Pantalla 6.5", cámara 48MP, batería 5000mAh.</p>
+            <p class="precio"><strong>$300</strong></p>
+            <button class="btn-agregar" onclick="agregarCarrito('Smartphone X100', 300)">Agregar al carrito</button>
+        </div>
+    </div>
+    <div class="card producto" data-categoria="smartphone" data-nombre="Smartphone Z5" data-precio="450">
+        <img src="img/smartphone2.jpg" alt="Smartphone Z5">
+        <div class="card-info">
+            <h3>Smartphone Z5</h3>
+            <p>Pantalla AMOLED, procesador rápido, resistente al agua.</p>
+            <p class="precio"><strong>$450</strong></p>
+            <button class="btn-agregar" onclick="agregarCarrito('Smartphone Z5', 450)">Agregar al carrito</button>
+        </div>
+    </div>
+    <div class="card producto" data-categoria="smartphone" data-nombre="Smartphone Max" data-precio="500">
+        <img src="img/smartphone3.jpg" alt="Smartphone Max">
+        <div class="card-info">
+            <h3>Smartphone Max</h3>
+            <p>Cámara 108MP, 5G, batería 6000mAh.</p>
+            <p class="precio"><strong>$500</strong></p>
+            <button class="btn-agregar" onclick="agregarCarrito('Smartphone Max', 500)">Agregar al carrito</button>
+        </div>
+    </div>
+    <div class="card producto" data-categoria="smartphone" data-nombre="Smartphone Lite" data-precio="250">
+        <img src="img/smartphone4.jpg" alt="Smartphone Lite">
+        <div class="card-info">
+            <h3>Smartphone Lite</h3>
+            <p>Compacto, económico, eficiente.</p>
+            <p class="precio"><strong>$250</strong></p>
+            <button class="btn-agregar" onclick="agregarCarrito('Smartphone Lite', 250)">Agregar al carrito</button>
+        </div>
+    </div>
+
+    <!-- Auriculares -->
+    <div class="card producto" data-categoria="auriculares" data-nombre="Auriculares BassPro" data-precio="80">
+        <img src="img/auriculares1.jpg" alt="Auriculares BassPro">
+        <div class="card-info">
+            <h3>Auriculares BassPro</h3>
+            <p>Cancelación de ruido, batería 20h, Bluetooth 5.0.</p>
+            <p class="precio"><strong>$80</strong></p>
+            <button class="btn-agregar" onclick="agregarCarrito('Auriculares BassPro', 80)">Agregar al carrito</button>
+        </div>
+    </div>
+    <div class="card producto" data-categoria="auriculares" data-nombre="Auriculares Wireless X" data-precio="100">
+        <img src="img/auriculares2.jpg" alt="Auriculares Wireless X">
+        <div class="card-info">
+            <h3>Auriculares Wireless X</h3>
+            <p>Conexión rápida, micrófono integrado, cómodo diseño.</p>
+            <p class="precio"><strong>$100</strong></p>
+            <button class="btn-agregar" onclick="agregarCarrito('Auriculares Wireless X', 100)">Agregar al carrito</button>
+        </div>
+    </div>
+    <div class="card producto" data-categoria="auriculares" data-nombre="Auriculares Studio" data-precio="150">
+        <img src="img/auriculares3.jpg" alt="Auriculares Studio">
+        <div class="card-info">
+            <h3>Auriculares Studio</h3>
+            <p>Alta fidelidad, diseño premium.</p>
+            <p class="precio"><strong>$150</strong></p>
+            <button class="btn-agregar" onclick="agregarCarrito('Auriculares Studio', 150)">Agregar al carrito</button>
+        </div>
+    </div>
+    <div class="card producto" data-categoria="auriculares" data-nombre="Auriculares Gamer" data-precio="130">
+        <img src="img/auriculares4.jpg" alt="Auriculares Gamer">
+        <div class="card-info">
+            <h3>Auriculares Gamer</h3>
+            <p>Sonido envolvente, micrófono retráctil.</p>
+            <p class="precio"><strong>$130</strong></p>
+            <button class="btn-agregar" onclick="agregarCarrito('Auriculares Gamer', 130)">Agregar al carrito</button>
+        </div>
+    </div>
+
+    <!-- Smartwatches -->
+    <div class="card producto" data-categoria="smartwatch" data-nombre="Smartwatch Alpha" data-precio="200">
+        <img src="img/smartwatch1.jpg" alt="Smartwatch Alpha">
+        <div class="card-info">
+            <h3>Smartwatch Alpha</h3>
+            <p>Monitor de actividad, notificaciones inteligentes, resistente al agua.</p>
+            <p class="precio"><strong>$200</strong></p>
+            <button class="btn-agregar" onclick="agregarCarrito('Smartwatch Alpha', 200)">Agregar al carrito</button>
+        </div>
+    </div>
+    <div class="card producto" data-categoria="smartwatch" data-nombre="Smartwatch Beta" data-precio="250">
+        <img src="img/smartwatch2.jpg" alt="Smartwatch Beta">
+        <div class="card-info">
+            <h3>Smartwatch Beta</h3>
+            <p>GPS integrado, control de música, batería larga duración.</p>
+            <p class="precio"><strong>$250</strong></p>
+            <button class="btn-agregar" onclick="agregarCarrito('Smartwatch Beta', 250)">Agregar al carrito</button>
+        </div>
+    </div>
+    <div class="card producto" data-categoria="smartwatch" data-nombre="Smartwatch Pro" data-precio="300">
+        <img src="img/smartwatch3.jpg" alt="Smartwatch Pro">
+        <div class="card-info">
+            <h3>Smartwatch Pro</h3>
+            <p>Pantalla AMOLED, ECG, llamadas vía Bluetooth.</p>
+            <p class="precio"><strong>$300</strong></p>
+            <button class="btn-agregar" onclick="agregarCarrito('Smartwatch Pro', 300)">Agregar al carrito</button>
+        </div>
+    </div>
+    <div class="card producto" data-categoria="smartwatch" data-nombre="Smartwatch Lite" data-precio="180">
+        <img src="img/smartwatch4.jpg" alt="Smartwatch Lite">
+        <div class="card-info">
+            <h3>Smartwatch Lite</h3>
+            <p>Ideal para deporte, batería 7 días.</p>
+            <p class="precio"><strong>$180</strong></p>
+            <button class="btn-agregar" onclick="agregarCarrito('Smartwatch Lite', 180)">Agregar al carrito</button>
+        </div>
+    </div>
+
+
+                <!-- Tablets -->
+                <div class="card producto" data-categoria="tablet" data-nombre="Tablet TabPro" data-precio="350">
+                    <img src="img/tablet1.jpg" alt="Tablet TabPro">
+                    <h3>Tablet TabPro</h3>
+                    <p>Pantalla 10", procesador rápido, batería 8000mAh.</p>
+                    <p><strong>$350</strong></p>
+                    <button class="btn-agregar" onclick="agregarCarrito('Tablet TabPro', 350)">Agregar al carrito</button>
+                </div>
+                <div class="card producto" data-categoria="tablet" data-nombre="Tablet Lite" data-precio="220">
+                    <img src="img/tablet2.jpg" alt="Tablet Lite">
+                    <h3>Tablet Lite</h3>
+                    <p>Liviana, ideal para estudiantes y trabajo diario.</p>
+                    <p><strong>$220</strong></p>
+                    <button class="btn-agregar" onclick="agregarCarrito('Tablet Lite', 220)">Agregar al carrito</button>
+                </div>
+                <div class="card producto" data-categoria="tablet" data-nombre="Tablet Pro XL" data-precio="600">
+                    <img src="img/tablet3.jpg" alt="Tablet Pro XL">
+                    <h3>Tablet Pro XL</h3>
+                    <p>Pantalla 12", compatible con lápiz digital.</p>
+                    <p><strong>$600</strong></p>
+                    <button class="btn-agregar" onclick="agregarCarrito('Tablet Pro XL', 600)">Agregar al carrito</button>
+                </div>
+                <div class="card producto" data-categoria="tablet" data-nombre="Tablet Kids" data-precio="180">
+                    <img src="img/tablet4.jpg" alt="Tablet Kids">
+                    <h3>Tablet Kids</h3>
+                    <p>Modo infantil, resistente a golpes.</p>
+                    <p><strong>$180</strong></p>
+                    <button class="btn-agregar" onclick="agregarCarrito('Tablet Kids', 180)">Agregar al carrito</button>
+                </div>
+
+                <!-- Laptops -->
+                <div class="card producto" data-categoria="laptop" data-nombre="Laptop Gamer X" data-precio="1200">
+                    <img src="img/laptop1.jpg" alt="Laptop Gamer X">
+                    <h3>Laptop Gamer X</h3>
+                    <p>16GB RAM, RTX 4070, almacenamiento 1TB SSD.</p>
+                    <p><strong>$1200</strong></p>
+                    <button class="btn-agregar" onclick="agregarCarrito('Laptop Gamer X', 1200)">Agregar al carrito</button>
+                </div>
+                <div class="card producto" data-categoria="laptop" data-nombre="Laptop UltraBook" data-precio="900">
+                    <img src="img/laptop2.jpg" alt="Laptop UltraBook">
+                    <h3>Laptop UltraBook</h3>
+                    <p>Ligera, batería larga duración, ideal para trabajo remoto.</p>
+                    <p><strong>$900</strong></p>
+                    <button class="btn-agregar" onclick="agregarCarrito('Laptop UltraBook', 900)">Agregar al carrito</button>
+                </div>
+                <div class="card producto" data-categoria="laptop" data-nombre="Laptop Business" data-precio="1000">
+                    <img src="img/laptop3.jpg" alt="Laptop Business">
+                    <h3>Laptop Business</h3>
+                    <p>Seguridad avanzada, batería de 12h.</p>
+                    <p><strong>$1000</strong></p>
+                    <button class="btn-agregar" onclick="agregarCarrito('Laptop Business', 1000)">Agregar al carrito</button>
+                </div>
+                <div class="card producto" data-categoria="laptop" data-nombre="Laptop Student" data-precio="700">
+                    <img src="img/laptop4.jpg" alt="Laptop Student">
+                    <h3>Laptop Student</h3>
+                    <p>8GB RAM, SSD 512GB, ligera y rápida.</p>
+                    <p><strong>$700</strong></p>
+                    <button class="btn-agregar" onclick="agregarCarrito('Laptop Student', 700)">Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- Carrito -->
+            <div class="carrito">
+                <h3>Carrito</h3>
+                <ul id="lista-carrito"></ul>
+                <div id="total-carrito">Total: $0</div>
+                <button onclick="vaciarCarrito()">Vaciar carrito</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TechSolutions. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Toast -->
+    <div id="toast"></div>
+</body>
+</html>
